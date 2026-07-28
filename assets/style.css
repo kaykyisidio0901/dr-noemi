@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Custom Styles — Dra. Noemi de Araújo
+   ========================================================================== */
+
+/* --- Material Symbols --- */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* --- Scroll-Reveal Animation --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Skip-to-content link (accessibility) --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 8px;
+  z-index: 100;
+  padding: 8px 16px;
+  background: #005394;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 8px;
+}
+
+/* --- Details/Summary marker reset --- */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+}
+
+/* --- Video hero: fallback if video fails --- */
+.hero-video-fallback {
+  background-size: cover;
+  background-position: center;
+}
+
+/* --- Focus ring for keyboard navigation --- */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #005394;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* --- Smooth scroll (base) --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduce motion for vestibular disorders */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
